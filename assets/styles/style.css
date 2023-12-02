@@ -1,0 +1,143 @@
+/* Impotación de Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variables del proyecto */
+:root {
+  --lightBlue: #0F65C0;
+  --blue: #004591;
+  --darkBlue: #00346E;
+  --white: #FFFFFF;
+  --black: #181818;
+  --gray: #999999;
+  --yellow: #FFDE45;
+  --red: #DC1F29;
+}
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-areas:
+    'header header'
+    'sidebar products'
+    'footer footer'
+    ;
+}
+
+/* HEADER */
+.header {
+  grid-area: header;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+}
+.title {
+  font-size: 2.4rem;
+  color: var(--white)
+}
+
+/* ASIDE BAR */
+.menu {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-left: 5rem;
+  background-color: var(--white);
+}
+.menu > h3 {
+  font-size: 2rem;
+}
+.menu > ul > li {
+  list-style: none;
+  padding-top: 1.5rem;
+}
+.menu > ul > li > a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--black);
+}
+.menu > ul > li > a:hover {
+  color: var(--red);
+}
+
+/* Productos */
+.productContainer{
+  grid-area: products;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--white);
+}
+
+/* Tarjeta de producto */
+.productCard {
+  width: 30rem;
+  margin: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productImg {
+  width: 30rem;
+}
+.productTitle {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+}
+.productPrice {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.ranking {
+  font-size: 1.5rem;
+  color: var(--yellow);
+}
+.buyBtn {
+  width: 30rem;
+  height: 3rem;
+  margin-top: 1.5rem;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.buyBtn:hover {
+  background-color: var(--darkBlue);
+  color: var(--yellow);
+}
+
+/* FOOTER */
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkBlue);
+  color: var(--white);
+}
+.socialMediaContainer {
+  font-size: 2rem;
+}
+.socialMediaContainer > a {
+  color: var(--white);
+}
